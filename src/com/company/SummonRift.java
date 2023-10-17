@@ -1,36 +1,26 @@
 package com.company;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+
 public class SummonRift {
-    private String SKT;
-    private String G2;
+    private ArrayList<SKT>skts;
+    private ArrayList<G2>g2s;
+    private LocalDateTime timeMatch;
 
-
-    public SummonRift(String SKT, String g2) {
-        this.SKT = SKT;
-        G2 = g2;
-    }
-
-    public String getSKT() {
-        return SKT;
-    }
-
-    public void setSKT(String SKT) {
-        this.SKT = SKT;
-    }
-
-    public String getG2() {
-        return G2;
-    }
-
-    public void setG2(String g2) {
-        G2 = g2;
+    public SummonRift(ArrayList<SKT> skts, ArrayList<G2> g2s, LocalDateTime timeMatch) {
+        this.skts = skts;
+        this.g2s = g2s;
+        this.timeMatch = timeMatch;
     }
 
     @Override
     public String toString() {
         return "SummonRift{" +
-                "SKT='" + SKT + '\'' +
-                ", G2='" + G2 + '\'' +
+                "skts=" + skts +
+                ", g2s=" + g2s +
+                ", timeMatch=" + timeMatch +
                 '}';
     }
 }
